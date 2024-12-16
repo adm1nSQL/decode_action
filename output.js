@@ -1,9 +1,11 @@
-//Mon Dec 16 2024 09:52:11 GMT+0000 (Coordinated Universal Time)
+//Mon Dec 16 2024 09:53:38 GMT+0000 (Coordinated Universal Time)
 //Base:https://github.com/echo094/decode-js
 //Modify:https://github.com/smallfawn/decode_action
 setTimeout(function () {
   fetch("config.json").then(_0x2cef21 => {
-    if (!_0x2cef21.ok) throw new Error("Failed to fetch config.json: " + _0x2cef21.status + " " + _0x2cef21.statusText);
+    if (!_0x2cef21.ok) {
+      throw new Error("Failed to fetch config.json: " + _0x2cef21.status + " " + _0x2cef21.statusText);
+    }
     return _0x2cef21.json();
   }).then(_0x365b5d => {
     const _0x22861c = _0x365b5d.urls || [],
