@@ -1,4 +1,4 @@
-//Thu Feb 06 2025 07:46:54 GMT+0000 (Coordinated Universal Time)
+//Thu Feb 06 2025 07:47:34 GMT+0000 (Coordinated Universal Time)
 //Base:https://github.com/echo094/decode-js
 //Modify:https://github.com/smallfawn/decode_action
 const $ = new Env("神秘VPN", {
