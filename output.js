@@ -1,65 +1,71 @@
-//Sun Mar 02 2025 05:52:59 GMT+0000 (Coordinated Universal Time)
+//Sun Mar 02 2025 12:09:30 GMT+0000 (Coordinated Universal Time)
 //Base:https://github.com/echo094/decode-js
 //Modify:https://github.com/smallfawn/decode_action
-const _0x4e3b = [String.fromCharCode(49), 7 .toString(), Math.pow(2, 3).toString(), 0 .toString(), 2 .toString(), 4 .toString(), 7 .toString(), 0 .toString(), 0 .toString(), 5 .toString(), String.fromCharCode(64), String.fromCharCode(113), String.fromCharCode(113), String.fromCharCode(46), String.fromCharCode(99), String.fromCharCode(111), String.fromCharCode(109)];
-function getEmail() {
-  return [_0x4e3b[0], _0x4e3b[1], _0x4e3b[2], _0x4e3b[3], _0x4e3b[4], _0x4e3b[5], _0x4e3b[6], _0x4e3b[7], _0x4e3b[8], _0x4e3b[9], _0x4e3b[10], _0x4e3b[11], _0x4e3b[12], _0x4e3b[13], _0x4e3b[14], _0x4e3b[15], _0x4e3b[16]].join("");
-}
-(function (_0x1d294a, _0x40be5d) {
-  const _0x2ea2f7 = _0x563e;
-  const _0x3f7527 = _0x1d294a();
-  while (true) {
-    try {
-      const _0x33d332 = -parseInt(_0x2ea2f7(446)) / 1 * (parseInt(_0x2ea2f7(438)) / 2) + -parseInt(_0x2ea2f7(441)) / 3 + -parseInt(_0x2ea2f7(437)) / 4 + parseInt(_0x2ea2f7(433)) / 5 * (-parseInt(_0x2ea2f7(434)) / 6) + parseInt(_0x2ea2f7(439)) / 7 * (parseInt(_0x2ea2f7(431)) / 8) + -parseInt(_0x2ea2f7(429)) / 9 + parseInt(_0x2ea2f7(432)) / 10;
-      if (_0x33d332 === _0x40be5d) {
-        break;
-      } else {
-        _0x3f7527.push(_0x3f7527.shift());
-      }
-    } catch (_0x43c91f) {
-      _0x3f7527.push(_0x3f7527.shift());
+var encode_version = "jsjiami.com.v5";
+const _0x14e78e = Date.now();
+var _0x131fe4 = "https://u.fast6.xyz";
+var _0x601ed0 = "hahahaha" + _0x14e78e;
+var _0x32dd56 = CryptoJS.HmacSHA256(_0x601ed0, _0x131fe4).toString();
+fetch("/get.php?t=" + _0x14e78e + "&sign=" + _0x32dd56).then(_0x2127c1 => _0x2127c1.json()).then(_0x1979e2 => {
+  _0x1979e2.forEach(_0x4743e5 => {
+    var _0x2680bc = "\n        <div class=\"col-xs-3 col-md-3\">\n            <div class=\"card shadow-lg\" style=\"margin-top: 1rem;\">\n                <div class=\"card-status-start bg-green\"></div>\n                <div class=\"card-body\">\n                    <h3 class=\"card-title\">账号信息</h3>\n                    <h3 class=\"card-text\">" + _0x4743e5.email + "</h3>\n                    <p class=\"card-subtitle mb-2 text-muted\" style=\"line-height: 25px\">\n                        账号信息: " + _0x4743e5.info + "</p>\n                    <p class=\"card-subtitle mb-2 text-muted\" style=\"line-height: 25px\">\n                        上次检查: " + _0x4743e5.lastcheck + "</p>\n                    <p class=\"card-subtitle mb-2 text-muted\" style=\"line-height: 25px\">状态:\n                        <span class=\"badge bg-green\">" + _0x4743e5.status + "</span>\n                    </p>\n                    <button class=\"btn btn-primary copy\" data-clipboard-text=\"" + _0x4743e5.email + "\">复制账号</button>\n                    <button class=\"btn btn-success copy\" data-clipboard-text=\"" + _0x4743e5.password + "\">复制密码</button>\n                </div>\n            </div>\n        </div>";
+    document.querySelector(".accounts").insertAdjacentHTML("beforeend", _0x2680bc);
+  });
+}).catch(_0x5a3a4e => console.error("获取数据时出现错误:", _0x5a3a4e));
+(function (_0x4a8ba0, _0x287bc4, _0x58b348) {
+  var _0x24eac2 = function () {
+    {
+      var _0x2f19e4 = true;
+      return function (_0x1c9fba, _0x1cb77d) {
+        var _0x7c3e16 = _0x2f19e4 ? function () {
+          if (_0x1cb77d) {
+            var _0x463b69 = _0x1cb77d.apply(_0x1c9fba, arguments);
+            _0x1cb77d = null;
+            return _0x463b69;
+          }
+        } : function () {};
+        _0x2f19e4 = false;
+        return _0x7c3e16;
+      };
     }
+  }();
+  var _0x519b6f = _0x24eac2(this, function () {
+    var _0x36995f = function () {};
+    var _0x1625ce = typeof window !== "undefined" ? window : typeof process === "object" && typeof require === "function" && typeof global === "object" ? global : this;
+    if (!_0x1625ce.console) {
+      _0x1625ce.console = function (_0x27236a) {
+        {
+          var _0x58b348 = {};
+          _0x58b348.log = _0x27236a;
+          _0x58b348.warn = _0x27236a;
+          _0x58b348.debug = _0x27236a;
+          _0x58b348.info = _0x27236a;
+          _0x58b348.error = _0x27236a;
+          _0x58b348.exception = _0x27236a;
+          _0x58b348.trace = _0x27236a;
+          return _0x58b348;
+        }
+      }(_0x36995f);
+    } else {
+      _0x1625ce.console.log = _0x36995f;
+      _0x1625ce.console.warn = _0x36995f;
+      _0x1625ce.console.debug = _0x36995f;
+      _0x1625ce.console.info = _0x36995f;
+      _0x1625ce.console.error = _0x36995f;
+      _0x1625ce.console.exception = _0x36995f;
+      _0x1625ce.console.trace = _0x36995f;
+    }
+  });
+  _0x519b6f();
+  _0x58b348 = "al";
+  try {
+    _0x58b348 += "ert";
+    _0x287bc4 = encode_version;
+    if (!(typeof _0x287bc4 !== "undefined" && _0x287bc4 === "jsjiami.com.v5")) {
+      _0x4a8ba0[_0x58b348]("鍒犻櫎版本号，js会定期弹窗，还请支持我们的工作");
+    }
+  } catch (_0x41edd0) {
+    _0x4a8ba0[_0x58b348]("删除版本号，js会定期弹窗");
   }
-})(_0x31d2, 150757);
-function _0x563e(_0x54529b, _0x5eec5a) {
-  const _0x31d2bc = _0x31d2();
-  _0x563e = function (_0x563ead, _0x5571f7) {
-    _0x563ead = _0x563ead - 428;
-    let _0xefa44a = _0x31d2bc[_0x563ead];
-    return _0xefa44a;
-  };
-  return _0x563e(_0x54529b, _0x5eec5a);
-}
-function _0x31d2() {
-  const _0x1eec5e = ["CBC", "181191KoORPs", "enc", "AES", "parse", "encrypt", "9IBRRcn", "stringify", "ZeroPadding", "611631ieOoEM", "MTIzNDU2Nzg5MEFC", "8ekmRAT", "2768000RLytLL", "37590qczfjh", "36azDSAZ", "pad", "Utf8", "491496UrArOi", "28646FqOkBP", "2094414RufaEy"];
-  _0x31d2 = function () {
-    return _0x1eec5e;
-  };
-  return _0x31d2();
-}
-function encrypt(_0xbbbc7d) {
-  const _0x2253c1 = _0x563e;
-  const _0x55956c = CryptoJS.enc[_0x2253c1(436)].parse("QUJDRURGMDk4NzY1");
-  const _0x58fbbf = CryptoJS.enc[_0x2253c1(436)].parse(_0x2253c1(430));
-  var _0x4cb953 = JSON[_0x2253c1(447)](_0xbbbc7d);
-  var _0x43e7ee = CryptoJS[_0x2253c1(442)][_0x2253c1(436)][_0x2253c1(444)](_0x4cb953);
-  return CryptoJS.AES[_0x2253c1(445)](_0x43e7ee, _0x58fbbf, {
-    iv: _0x55956c,
-    mode: CryptoJS.mode[_0x2253c1(440)],
-    padding: CryptoJS[_0x2253c1(435)][_0x2253c1(428)]
-  }).toString();
-}
-function decrypt(_0x17c178) {
-  const _0x57b634 = _0x563e;
-  if (_0x17c178) {
-    const _0x453f4f = CryptoJS.enc[_0x57b634(436)][_0x57b634(444)]("QUJDRURGMDk4NzY1");
-    const _0x362108 = CryptoJS[_0x57b634(442)][_0x57b634(436)].parse(_0x57b634(430));
-    var _0x3062d9 = CryptoJS[_0x57b634(443)].decrypt(_0x17c178, _0x362108, {
-      iv: _0x453f4f,
-      mode: CryptoJS.mode.CBC,
-      padding: CryptoJS.pad[_0x57b634(428)]
-    });
-    return _0x3062d9.toString(CryptoJS[_0x57b634(442)][_0x57b634(436)]);
-  }
-  return _0x17c178;
-}
+})(window);
+encode_version = "jsjiami.com.v5";
