@@ -1,4 +1,4 @@
-//Sat Mar 15 2025 17:50:36 GMT+0000 (Coordinated Universal Time)
+//Sat Mar 15 2025 17:54:13 GMT+0000 (Coordinated Universal Time)
 //Base:https://github.com/echo094/decode-js
 //Modify:https://github.com/smallfawn/decode_action
 var _0xodw = "jsjiami.com.v7";
